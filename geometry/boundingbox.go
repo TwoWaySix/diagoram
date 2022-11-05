@@ -1,20 +1,14 @@
 package geometry
 
 import (
-	"image/color"
 	"math"
 )
-
-type Point2D struct {
-	X, Y  float64
-	Color color.Color
-}
 
 type BoundingBox struct {
 	XMin, XMax, YMin, YMax float64
 }
 
-func NewBoundingBox(points []Point2D) BoundingBox {
+func NewBoundingBox(points []Point) BoundingBox {
 	bb := BoundingBox{
 		XMin: math.Inf(1),
 		XMax: math.Inf(-1),
